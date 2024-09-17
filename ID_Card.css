@@ -1,0 +1,101 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #9a9ace;
+}
+
+.id-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    border: 2px solid #333;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 38rem;
+    margin-left: 25rem;
+    margin-top: 5rem;
+
+    background-color: #fff;
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    background-color: #004d99;
+    color: white;
+    padding: 10px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.college-logo {
+    flex: 1;
+}
+
+.college-logo img {
+    height: 5rem;
+    border-radius: 8px;
+    margin-left: 1.5rem;
+}
+
+.college-info {
+    flex: 10;
+    text-align: center;
+}
+
+.college-info h2 {
+    margin: 0;
+    font-size: 1.4rem;
+}
+
+.college-info p {
+    margin: 5px;
+    font-size: 1.1rem;
+}
+
+.card-body {
+    display: flex;
+    padding: 20px;
+}
+
+.photo {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.photo img {
+    width: 12rem;
+    height: 14rem;
+    border-radius: 10%;
+    border: 2px solid #004d99;
+}
+
+.details {
+    flex: 2;
+    padding-left: 3rem;
+}
+
+.details h2 {
+    margin-top: 0;
+    text-align: center;
+    color: #004d99;
+}
+
+.details p {
+    margin: 10px 0;
+    font-size: 1rem;
+    color: #555;
+}
+
+.details p strong {
+    color: #333;
+}
+
+footer{
+    display: flex;
+    align-items: center;
+    background-color: #004d99;
+}

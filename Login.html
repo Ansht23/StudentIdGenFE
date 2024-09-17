@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Started</title>
+    <link rel="shortcut icon" type="image/x-icon" href="logo.png">
+    <link rel="stylesheet" href="LoginStyles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="left-section">
+            <img src="a.jpeg" alt="Education Background">
+        </div>
+        <div class="Image">
+        </div>
+        <div class="right-section">
+            <div class="role-selection">
+                <button class="role-button active" onclick="showLogin('Student')">Student</button>
+                <button class="role-button" onclick="showLogin('Admin')">Admin</button>
+            </div>
+            <div class="login-card">
+                <div class="login-box Student active">
+                    <h2>Student Login</h2>
+                    <form>
+                        <label for="email-id">Email Id</label>
+                        <input type="email-id" id="email-id" name="email-id" value="" required>
+                        
+                        <label for="Student-password">Password</label>
+                        <input type="password" id="Student-password" name="password" value="" required>
+                        
+
+                        <div class="credential">
+                        <a href="#" class="forgot-password">Forgot Password?</a>
+                        <a href="RegForm.html" target="_blank" class="new-user">New User?Click Here</a>
+                        </div>
+                        <a href="studentDashboard.html"><button type="submit" class="login-button">Log in</button></a>
+                    </form>
+                </div>
+                <div class="login-box Admin">
+                    <h2>Admin Login</h2>
+                    <form>
+                        <label for="Username">Username</label>
+                        <input type="Username" id="Username" name="Username" required>
+                        
+                        <label for="Admin-password">Password</label>
+                        <input type="password" id="Admin-password" name="password" required>
+                        
+                        <a href="#" class="forgot-password">Forgot Password?</a>
+                        
+                        <a href="adminDashboard.html"><button type="submit" class="login-button">Log in</button></a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="Login.js"></script>
+</body>
+</html>

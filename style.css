@@ -1,0 +1,241 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+  font-family: Arial, sans-serif;
+  background: url('bg1.jpeg') no-repeat center center fixed;
+  background-size: cover;
+  position: relative;
+  height: 100vh;
+  color: white;
+}
+
+/* Apply opacity to the background image */
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+}
+
+/* Navigation Bar */
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 50px;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1;
+  height: 120px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+nav .logo img {
+  height: 80px;
+  transition: transform 0.3s ease-in-out;
+}
+
+nav .logo img:hover {
+  transform: scale(1.1);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+}
+
+nav ul li {
+  margin-left: 18px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+  transition: color 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+  color: #004d99;
+  ;
+}
+
+/* Main content styling */
+.content {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.content h1 {
+  font-size: 40px;
+  color: white;
+  text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.7);
+  animation: textPopUp 1.5s ease-in-out;
+  font-family:'Times New Roman', Times, serif;
+  letter-spacing: 2px;
+}
+
+.content p {
+  font-size: 20px;
+  color: azure;
+  animation: textPopUp 1.5s ease-in-out;
+  font-family:'Times New Roman', Times, serif;
+  letter-spacing: 2px;
+}
+
+@keyframes textPopUp {
+  0% {
+      transform: scale(0.8);
+      opacity: 0;
+  }
+  100% {
+      transform: scale(1);
+      opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+
+/* Get Started Button */
+.get-started {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.get-started button {
+  padding: 20px 40px;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  background-color: #004d99;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  animation: pulse 1.5s infinite;
+  transition: transform 0.3s ease-in-out;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.get-started button:hover {
+  transform: scale(1.1);
+  background-color: #012850;
+}
+
+/* Button Animation */
+@keyframes pulse {
+  0% {
+      transform: scale(1);
+  }
+  50% {
+      transform: scale(1.1);
+  }
+  100% {
+      transform: scale(1);
+  }
+}
+
+/* Add subtle fade-in effect for the entire page */
+html {
+  animation: pageFadeIn 1.5s ease-in-out;
+}
+
+@keyframes pageFadeIn {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+
+/* Media Queries */
+
+/* Adjustments for tablets and smaller devices */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    height: auto;
+    padding: 10px 20px;
+  }
+
+  nav .logo img {
+    height: 80px; /* Smaller logo */
+  }
+
+  nav ul {
+    flex-direction: column;
+    margin-left: 0;
+  }
+
+  nav ul li {
+    margin-left: 0;
+    margin-bottom: 10px; /* Spacing between menu items */
+  }
+
+  nav ul li a {
+    font-size: 18px; /* Slightly smaller font size */
+  }
+
+  .content h1 {
+    font-size: 40px; /* Smaller heading size */
+  }
+
+  .get-started button {
+    padding: 15px 30px;
+    font-size: 18px; /* Smaller button size */
+  }
+}
+
+/* Adjustments for mobile phones */
+@media (max-width: 480px) {
+  nav {
+    padding: 5px 10px;
+  }
+
+  nav .logo img {
+    height: 60px; /* Even smaller logo */
+  }
+
+  nav ul li a {
+    font-size: 16px; /* Further reduced font size */
+  }
+
+  .content h1 {
+    font-size: 30px; /* Further reduced heading size */
+  }
+
+  .get-started button {
+    padding: 10px 20px;
+    font-size: 16px; /* Further reduced button size */
+  }
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Registration Form</title>
+   <link rel="shortcut icon" type="image/x-icon" href="logo.png">
+   <link rel="stylesheet" href="RegStyles.css">
+</head>
+<body>
+   <div class="Heading">
+      <div class="h1"><h1>Student Registration Form</h1></div>
+      <div class="p"><p>"Please fill all the required details. Try not commtiting any mistake."</p></div>
+      <div class="form-box">
+         <form id="Registration" enctype="multipart/form-data" method="post" action="/api/students/Register" >
+
+         <label for="full-name"> Full Name</label>
+         <input type="text" id="full-name" name="fullName" placeholder="Enter Your Full Name here" required><br>
+
+         <label for="father-name"> Father Name</label>
+         <input type="text" id="father-name" name="fatherName" placeholder="Enter Your Father Name here" required><br>
+
+         <label for="mother-name"> Mother Name</label>
+         <input type="text" id="mother-name" name="motherName" placeholder="Enter Your Mother Name here" required><br>
+
+         <label for="gender"> Gender</label>
+         <select id="gender" name="gender" required>
+            <option value="MALE">Male</option>
+            <option value="FEMALE">Female</option>
+            <option value="OTHER">Other</option></select><br>
+
+         <label for="dob"> Date of Birth</label>
+         <input type="date" id="dob" name="dateOfBirth" min="2000-01-01" max="2003-12-31" required> <br>
+
+         <label for="category"> Category</label>
+         <select id="category" name="category" required>
+            <option value="GENERAL">General</option>
+            <option value="EWS">Gen(EWS)</option>
+            <option value="OBC">OBC</option>
+            <option value="SC">SC</option>
+            <option value="ST">ST</option></select><br>
+      
+         <label for="phone"> Phone Number</label>
+         <input type="tel" id="phone" name="phoneNumber" placeholder="xxxxx-xxxxx" pattern="[0-9]{5}-[0-9]{5}" required><br>
+      
+         <label for="email-id"> Email Address </label>
+         <input type="email" id="email-id" name="emailAddress" placeholder="example@example.com" 
+         pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[cC][oO][mM]" required> <br>
+
+         <label for="address"> Address</label>
+         <input type="text" id="address" name="address" placeholder="Enter Your Address here" required><br>
+
+         <label for="image">Upload Your Image (JPEG only)</label>
+         <input type="file" id="image" name="image" accept=".jpeg, .jpg" required><br>
+      
+         <label for="password">Enter Password</label>
+         <input type="password" id="password" name="password" required>
+         <br> 
+
+         <label for="confirm-password">Confirm Your Password</label>      
+         <input type="password" id="confirm-password" name="confirmPassword" required>
+         <input type="checkbox" id="showPassword" onclick="togglePassword()"> Show Password
+         <br>
+
+         <input type="submit" value="Register">
+      </form>
+      </div>
+   </div>
+
+   <script src = "RegForm.js"></script>
+</body>
+</html>

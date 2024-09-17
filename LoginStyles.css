@@ -1,0 +1,203 @@
+body {
+   margin: 0;
+   font-family: Arial, sans-serif;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 100vh;
+   background-color: #9a9ace;
+}
+
+.container {
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: center;
+   width: 80%;
+   height: 80%;
+   background-color: #dee0e7;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+   border-radius: 10px;
+   overflow: hidden;
+}
+
+.left-section, .right-section {
+   flex: 1;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding: 20px;
+}
+
+.left-section img {
+   width: 85%;
+   height: 85%;
+   margin-left: -40px;
+}
+
+.right-section {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+}
+
+.role-selection {
+   display: flex;
+   margin-bottom: 20px;
+   margin-top: -350px;
+   margin-right: -15px;
+}
+
+.role-button {
+   padding: 10px 20px;
+   background-color: #f2f2f2;
+   border: none;
+   border-radius: 20px;
+   margin: 0 5px;
+   cursor: pointer;
+   transition: background-color 0.3s, color 0.3s;
+}
+
+.role-button.active {
+   background-color: #4a4aff;
+   color: white;
+}
+
+.login-card {
+   width: 100%;
+   max-width: 400px;
+   perspective: 1000px;
+   position: relative;
+}
+
+.login-box {
+   position: absolute;
+   width: 100%;
+   backface-visibility: hidden;
+   transition: transform 0.6s ease-in-out;
+   opacity: 0;
+   transform: rotateY(180deg);
+   background-color: white;
+   padding: 20px;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+   border-radius: 10px;
+   text-align: center;
+}
+
+.login-box.active {
+   opacity: 1;
+   transform: rotateY(0deg);
+}
+
+.right-section {
+   margin-top: 0%;
+}
+
+.login-box h2 {
+   margin-bottom: 20px;
+   color: #4a4aff;
+}
+
+.login-box label {
+   display: block;
+   width: 90%;
+   text-align: left;
+   margin-bottom: 5px;
+   color: #333;
+}
+
+.login-box input {
+   width: 95%;
+   padding: 10px;
+   margin-bottom: 15px;
+   border: 1px solid #ddd;
+   border-radius: 5px;
+}
+
+.new-user {
+   text-align: right;
+   color: #4a4aff;
+   text-decoration: none;
+}
+
+.forgot-password {
+   text-align: left;
+   display: block;
+   color: #4a4aff;
+   text-decoration: none;
+   padding-bottom: 10px;
+}
+
+.credential {
+   display: flex;
+   margin: 10px 0px 0px 10px;
+   gap: 100px;
+
+}
+.login-button {
+   width: 100%;
+   padding: 10px;
+   background-color: #4a4aff;
+   border: none;
+   border-radius: 5px;
+   color: white;
+   cursor: pointer;
+   transition: background-color 0.3s;
+}
+
+.login-button:hover {
+   background-color: #3333cc;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+   .container {
+       flex-direction: column;
+       width: 90%;
+       height: auto;
+   }
+
+   .left-section, .right-section {
+       padding: 10px;
+   }
+
+   .left-section img, .login-card {
+       width: 100%;
+   }
+
+   .role-selection {
+       margin-top: 20px;
+   }
+
+   .right-section {
+       margin-top: 20px;
+   }
+
+   .login-card {
+       max-width: 100%;
+   }
+}
+
+@media (max-width: 480px) {
+   .role-button {
+       padding: 8px 16px;
+       margin: 0 3px;
+   }
+
+   .login-box input {
+       width: 90%;
+   }
+
+   .login-button {
+       padding: 8px;
+   }
+
+   .forgot-password, .new-user {
+       font-size: 14px;
+   }
+
+   .login-box h2 {
+       font-size: 20px;
+   }
+}
