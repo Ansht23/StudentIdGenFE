@@ -55,8 +55,14 @@ function showLogin(role) {
           alert("Please enter valid credentials.");
         }
       } else if (role === 'Admin') {
-        // Handle admin login logic (assuming you have a separate API endpoint or validation mechanism)
-        // ...
-      }
-    });
-  });
+        emailOrUsername = document.getElementById('Username').value;
+        password = document.getElementById('Admin-password').value;
+
+        if (emailOrUsername === "Admin" && password === "admin123") {
+            window.location.href = "adminDashboard.html";
+        } else {
+            alert("Invalid Admin credentials");
+        }
+    }
+});
+});

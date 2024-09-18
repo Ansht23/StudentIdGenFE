@@ -21,13 +21,28 @@ function fetchStudentData() {
     document.getElementById('email-address').textContent = studentData.emailAddress;
     document.getElementById('address').textContent = studentData.address;
   
-    // (Optional) Update student image based on API data (if applicable)
+
     if (studentData.fullName==="Ansh") {
       console.log("image");
-      
-      document.getElementById("student-image").src="./a.jpeg";
-  }
-  }
-  
-  // Call the fetchStudentData function when the script loads
+      document.getElementById("student-image").src="./pic1.jpeg.png";
+  } else if (studentData.fullName==="Vishakha") {
+    console.log("image");
+    document.getElementById("student-image").src="./pic2.jpeg.png";
+} else if (studentData.fullName==="Khushi") {
+  console.log("image");
+  document.getElementById("student-image").src="./pic3.jpeg.png";
+} else if (studentData.fullName==="Yash") {
+  console.log("image");
+  document.getElementById("student-image").src="./pic4.jpeg.png";
+} else if (studentData.fullName==="Vaibhav") {
+  console.log("image");
+  document.getElementById("student-image").src="./pic5.jpeg.png";
+} else if (studentData.fullName==="Soeel") {
+  console.log("image");
+  document.getElementById("student-image").src="./pic6.jpeg.png";
+}
+
+
+}
+
   window.addEventListener('load', fetchStudentData);

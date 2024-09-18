@@ -19,11 +19,19 @@ function fetchStudentData() {
     document.getElementById('phone-number').textContent = studentData.phoneNumber;
     document.getElementById('address').textContent = studentData.address;
   
-    // (Optional) Update student image based on API data (if applicable)
     if (studentData.fullName==="Ansh") {
-        document.getElementById("student-photo").src="./a.jpeg";
-    }
+        document.getElementById("student-photo").src="./pic1.jpeg.png";
+    } else if (studentData.fullName==="Vishakha") {
+      document.getElementById("student-photo").src="./pic2.jpeg.png";
+    } else if (studentData.fullName==="Khushi") {
+    document.getElementById("student-photo").src="./pic3.jpeg.png";
+    } else if (studentData.fullName==="Yash") {
+      document.getElementById("student-photo").src="./pic4.jpeg.png";
+    } else if (studentData.fullName==="Vaibhav") {
+      document.getElementById("student-photo").src="./pic5.jpeg.png";
+    } else if (studentData.fullName==="Soeel") {
+      document.getElementById("student-photo").src="./pic6.jpeg.png";
   }
-  
+}
   // Call the fetchStudentData function when the script loads
   window.addEventListener('load', fetchStudentData);
